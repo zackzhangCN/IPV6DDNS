@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+aliyun:
+  ddns:
+    regionId: cn-hangzhou
+    # 要解析的主域名
+    domainName: zack.net.cn
+    # 记录值
+    keyWord: ipv6.pan
+    # 记录类型(AAAA为解析ipv6)
+    type: AAAA
+    # 令牌及秘钥
+    accessKeyId: ----------
+    secret: --------------
+

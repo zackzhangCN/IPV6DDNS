@@ -6,16 +6,19 @@
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<!--jar包-->
 	<packaging>jar</packaging>
+	<!--name-->
+	<name>IPV6DDNS</name>
+	<description>create for raspberry pi 4b, use ipv6ddns analysis "http://ipv6.pan.zack.net.cn" to connect my nextcloud.</description>
 
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
-
+	<!--springboot父依赖-->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.0.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 
 	<properties>
@@ -25,15 +28,22 @@
 	</properties>
 
 	<dependencies>
+		<!--spring mvc-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-core</artifactId>
+			<version>4.4.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-alidns -->
+		<dependency>
+			<groupId>com.aliyun</groupId>
+			<artifactId>aliyun-java-sdk-alidns</artifactId>
+			<version>2.0.10</version>
 		</dependency>
 	</dependencies>
 
@@ -44,7 +54,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>IPv6DDNSApplication</finalName>
 	</build>
-
 
 </project>
